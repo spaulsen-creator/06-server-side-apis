@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,43 +11,34 @@
   <link rel="stylesheet" href="./assets/style.css" />
   <title>Git it Done</title>
 </head>
-<!--Banner-header-->
+
 <body class="flex-column min-100-vh">
   <header class="hero">
-<!--font-awesome-->      
+     
     <h1 class="app-title"><i class="fas fa-cloud-sun-rain"></i> Better Weather!</h1>
-    <p>Search for a GitHub user or click on a language to see a list of repositories and how many open issues they have!
-    </p>
+    <p>Before setting out on your next trip check the weather!</p>
   </header>
 
 
   <main class="flex-row justify-space-between">
     <div class="col-12 col-md-4">
-<!-- Search by user card-->
+
       <div class="card">
-        <h3 class="card-header text-uppercase">Search By User</h3>
+        <h3 class="card-header text-uppercase">Search By City</h3>
         <form id="user-form" class="card-body">
           <label class="form-label" for="username">Username</label>
           <input name="city-search" id="city-search" type="text" autofocus="true" class="form-input" />
-          <button type="submit" id="get-weather" class="btn">Get User</button>
+          <button type="submit" id="get-weather" class="btn">Get the Weather</button>
         </form>
       </div>
-<!-- results drop in here-->
+
       <table class="card-body table mx-auto my-4">
         <th>
           <p class="my-4">Results</p>
         </th>
         <tbody id="repo-table" class="mx-auto text-center"></tbody>
       </table>
-<!--Search by topic card-
-      <div class="card">
-        <h3 class="card-header text-uppercase">Search By Topic</h3>
-        <div id="language-buttons" class="card-body">
-          <button data-language="javascript" class="btn">JavaScript</button>
-          <button data-language="html" class="btn">HTML</button>
-          <button data-language="css" class="btn">CSS</button>
-        </div>
-      </div>-->
+
     </div>
 
     <div class="col-12 col-md-8">
@@ -58,4 +50,4 @@
   <script src="./assets/js/script.js"></script>
 </body>
 
-</html>
+</html> 

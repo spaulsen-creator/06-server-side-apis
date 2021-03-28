@@ -93,9 +93,11 @@
   }
   
   .hero {
+    /* 3% 4% */
     padding: 3% 4%;
     background-color: var(--dark);
     color: var(--primary);
+    margin: auto;
   }
   
   .hero p {
