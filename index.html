@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" href="./assets/style.css" />
-  <title>Git it Done</title>
+  <title>Better Weather</title>
 </head>
 
 <body class="flex-column min-100-vh">
@@ -27,21 +27,25 @@
         <h3 class="card-header text-uppercase">Search By City</h3>
         <form id="user-form" class="card-body">
           <label class="form-label" for="username">Username</label>
-          <input name="city-search" id="city-search" type="text" autofocus="true" class="form-input" />
-          <button type="submit" id="get-weather" class="btn">Get the Weather</button>
+          <input name="search-city" id="search-city" type="text" autofocus="true" class="form-input" />
+          <button type="submit" id="search-button" class="btn">Get the Weather</button>
         </form>
       </div>
+      
 
-      <table class="card-body table mx-auto my-4">
+
+      </div>
+
+    <!--<table class="card-body table mx-auto my-4">
         <th>
           <p class="my-4">Results</p>
         </th>
         <tbody id="repo-table" class="mx-auto text-center"></tbody>
-      </table>
-
+      </table>>
+    -->
     </div>
 
-    <div class="col-12 col-md-8">
+    <div class="col-12 col-md-8 results">
       <h2 class="subtitle">Your trip weather: <span id="repo-search-term"></span></h2>
       <div id="repos-container" class="list-group"></div>
     </div>
