@@ -41,7 +41,13 @@
   p {
     font-size: 1.2rem;
   }
+
   
+div.results {
+  border: 3px solid;
+}
+
+
    .btn {
     font-size: 1.3rem;
     text-decoration:none;

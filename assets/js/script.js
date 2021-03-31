@@ -11,28 +11,28 @@ let apiKey = '7b56d24fc2a9f800b5f359ee3bc2a2f5';
 let formSubmitHandler = function (event) {
   event.preventDefault();
 
-  let cityname = searchCity.value.trim();
+  //let cityname = searchCity.value();
 
-  if (cityname) {
-    getCityNames (cityname) ;
-    searchCity.textContent = '';
-    nameInputEl.Value = '';
-  } else {
-      alert('Please select a city.');
-  }
+  // if (cityname) {
+  //   getCityNames (cityname) ;
+  //   searchCity.textContent = '';
+  //   nameInputEl.Value = '';
+  // } else {
+  //     alert('Please select a city.');
+  // }
 };
-
-
+//loCALSTORAGE SET- set
+//localStorage get- load on page
 
 
 function getApi(event) {
   event.preventDefault();  
-  // stops default click   
+    
   let searchValue = document.getElementById('search-city').value;
  
   console.log(searchValue)
   let requestUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=${apiKey}&units=imperial`;
- 
+ // repeat api fetch
   fetch(requestUrl)
     .then(function (response) {
       return response.json()
@@ -46,11 +46,18 @@ function getApi(event) {
 console.log('humidity:', data.main.humidity);
 console.log('weather:', data.main.temp);
 console.log('name:', data.name)
-document.querySelector('.results').textContent = data.main.humidity;
-//document.querySelector('.results').textContent = data.main.temp;
+//Needs separate div
+//document.querySelector('.results').textContent = data.main.humidity;
+document.querySelector('.results').textContent = data.main.temp;
+    })
+  } 
 
+//data.weather[0].icon;
+  //let requestUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${searchValue}&appid=${apiKey}&units=imperial`;
+ 
+  //var = data.weather[0].icon;
 
-
+  // weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
 
 
 
@@ -67,16 +74,24 @@ document.querySelector('.results').textContent = data.main.humidity;
       // humidity.textContent = "Humidity: " + data.main.humidity + "% ";
       // humidity.classList = "list-group";
 
+
+
       // let weatherIcon = document.createElement('img');
       // weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
-      // cityEl.appendChild(wetaherIcon);
+      // cityEl.appendChild(weatherIcon);
+
+
+
 
       // let currentDate = document.createElement('div');
       // currentDate.textContent = " (" + moment(data.value).calendar("MMM D, YYYY") + ") ";
       // cityEl.append(currentDate);
-   })
-}
+  
+
 searchButton.addEventListener('click', getApi);
+
+
+
 
 // function savedCities(searchedCity) {
 //   cityArray.push(citySearch)
@@ -137,36 +152,7 @@ searchButton.addEventListener('click', getApi);
 //       }
 //     });
 // }
-
-// fetchButton.addEventListener('click', getApi);
-
-  //grab user input
- //var citySearch = document.getElementById('city-search').value;
- 
-
- 
-
-
-
-
-
-
-
-  //console.log(citySearch);
-
-
-
-
-  //construct new request url- dynamic pull
-// make the fetch call
-  //console log data from fetch
-  // traverse data 
-  // display on page
-
-
-
-
-  //5 day weather fetch function.
+//5 day weather fetch function.
   // function getFiveDay(event) {
   //   event.preventDefault();
   //   fetch(fiveDayUrl)
@@ -178,7 +164,6 @@ searchButton.addEventListener('click', getApi);
   //       });
 
   //     }        
-//dial into specific arrauy data with the console.log
 
 
-//    lesson 3 week 6  
+
