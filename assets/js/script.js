@@ -19,6 +19,7 @@ let formSubmitHandler = function (event) {
 function getApi(event) {
   event.preventDefault();
 
+  //let searchValue = document.getElementById('search-city').value;
   let searchValue = document.getElementById('search-city').value;
 
   console.log(searchValue)
@@ -34,13 +35,14 @@ function getApi(event) {
         console.log(data)
         document.querySelector('#search-city').value = "";
        
-      });
-      console.log('humidity:', data.main.humidity); 
-      console.log('weather:', data.main.temp); 
-      console.log('name:', data.name)
+        console.log('humidity:', data.main.humidity); 
+        console.log('weather:', data.main.temp); 
+        console.log('name:', data.name)
       //Needs separate div
       //document.querySelector('.results').textContent = data.main.humidity;
-      document.querySelector('.results').textContent = data.main.temp;
+        document.querySelector('.results').textContent = data.main.temp;
+
+      });
 
       let forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${searchValue}&appid=${apiKey}&units=imperial`;
     
