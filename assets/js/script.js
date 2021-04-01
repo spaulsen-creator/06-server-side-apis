@@ -23,7 +23,7 @@ function getApi(event) {
 
   console.log(searchValue)
   let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=${apiKey}&units=imperial`;
-  let forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${searchValue}&appid=${apiKey}&units=imperial`;
+  
   // repeat api fetch
   fetch(weatherUrl)
     .then(function (response) {
@@ -33,7 +33,7 @@ function getApi(event) {
     .then(function (data) {
         console.log(data)
         document.querySelector('#search-city').value = "";
-        // $('#search-city').val('')
+       
       });
       console.log('humidity:', data.main.humidity); 
       console.log('weather:', data.main.temp); 
@@ -42,7 +42,8 @@ function getApi(event) {
       //document.querySelector('.results').textContent = data.main.humidity;
       document.querySelector('.results').textContent = data.main.temp;
 
-
+      let forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${searchValue}&appid=${apiKey}&units=imperial`;
+    
       fetch(forecastUrl)
       .then(function (response) {
         return response.json()
