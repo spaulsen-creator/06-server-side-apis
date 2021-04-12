@@ -1,59 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/style.css" />
-  <title>Better Weather</title>
+  <title>Weather Planner</title>
 </head>
 
-<body class="flex-column min-100-vh">
-  <header class="hero">
-     
-    <h1 class="app-title"><i class="fas fa-cloud-sun-rain"></i> Better Weather!</h1>
-    <p>Before setting out on your next trip check the weather!</p>
-  </header>
+<body>
+  <div class="jumbotron bg-dark text-white text-center">
+    <div class="container">
+      <h1 class="display-1">Search for a city to see the current weather forecast and the 5-day weather plan for that city.</h1>
+    </div>
+  </div>
 
-
-  <main class="flex-row justify-space-between">
-    <div class="col-12 col-md-4">
-
-      <div class="card">
-        <h3 class="card-header text-uppercase">Search By City</h3>
-        <form id="user-form" class="card-body">
-          <label class="form-label" for="username">Username</label>
-          <input name="search-city" id="search-city" type="text" autofocus="true" class="form-input" />
-          <button type="submit" id="search-button" class="btn">Get the Weather</button>
-        </form>
-      </div>
-      
-
+  <main>
+    <section>
+      <div>
 
       </div>
 
-    <!--<table class="card-body table mx-auto my-4">
-        <th>
-          <p class="my-4">Results</p>
-        </th>
-        <tbody id="repo-table" class="mx-auto text-center"></tbody>
-      </table>>
-    -->
-    </div>
 
-    <div class="col-12 col-md-8 results">
-      <h2 class="subtitle">Your trip weather: <span id="repo-search-term"></span></h2>
-      <!--id =humidity, another line duplicated for anothe id temp etc.-->
-      <div id="repos-container" class="list-group"></div>
-     
-    </div>
-  </main>
+    </section>
 
+
+  </main>  
+
+  <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
   <script src="./assets/js/script.js"></script>
+
 </body>
 
-</html> 
+</html>  
