@@ -20,9 +20,27 @@
   </div>
 
   <main>
-    <section>
-      <div>
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-4 col-xl-3">
+          <div class="card">
+            <h3 class="card-header text-uppercase custom-card-header">City Search</h3>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" id="search-value" placeholder="City Name">
+              <button class="btn btn-outline-secondary custom-button" type="button" id="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+              <div calss="container col-12 col-md-12 text-center" id="history" >
+                <p class="card-body"></p>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <div class="col-12 col-md-8 col-xl-9" id="weather">
 
+        </div>
+      </div>
+      <div class="row-border" id="forecast">
+        <h2 class="col-8 text-center"> 5 Day Forecast </h2>
+        <div class="row" id="five-day-container"></div>
       </div>
 
 
